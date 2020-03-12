@@ -1,0 +1,26 @@
+<div class="logueo">
+    <form class="logueo-form" [formGroup]="datoLogin" (ngSubmit)="onLogin(datoLogin.value)">
+
+      <p class="logueo-full-width">
+        <mat-form-field class="form-login" appearance="outline">
+          <mat-label>Usuario</mat-label>
+          <input matInput placeholder="Ingrese nombre de usuario" type="text" ngModel required>
+          <mat-icon matSuffix>person</mat-icon>
+
+        </mat-form-field>
+      </p>
+      <p class="logueo-full-width">
+        <mat-form-field class="form-login" [style.fontSize.px] = 14 appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input matInput placeholder="Ingrese contraseña" type="password" ngModel required>
+          <mat-icon matSuffix>vpn_key</mat-icon>
+
+        </mat-form-field>
+      </p>
+
+
+      <button class="boton-login" mat-flat-button >Ingresar</button>
+    </form>
+
+
+</div>

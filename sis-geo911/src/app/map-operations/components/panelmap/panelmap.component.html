@@ -1,0 +1,71 @@
+<mgl-map
+    [style]="'mapbox://styles/mapbox/streets-v11'"
+    [zoom]="[15]"
+    [center]="[-66.144993, -17.393683]"
+  >
+    <!-- adicionar controladores -->
+    <mgl-control  mglGeocoder >  </mgl-control>
+    <mgl-control  mglNavigation>  </mgl-control>
+    <mgl-control  mglFullscreen>  </mgl-control>
+    <mgl-control  mglGeolocate>  </mgl-control>
+    
+    <mgl-control mglScale unit="metric" position="top-right" ></mgl-control>
+    <!-- adiciona marcadores -->
+  <div class="puntos-geo" *ngFor="let punto of dat_geojson" >
+    <mgl-marker [lngLat]="punto.geometry.coordinates" #myMarker >
+      <div  class="marker" >
+        <img 
+            src= "{{url}}"
+            alt="triangle with all three sides equal"
+            height="40px"
+            width="40px" />
+            <h3 class="titulo"><strong>{{punto.properties.title}}</strong></h3>
+      </div>
+    </mgl-marker>
+    <mgl-popup
+      class="popup"
+      [closeButton] = "false"
+      [closeOnClick]="true"
+      [marker]="myMarker"
+      [anchor]="top-right"
+    >
+      <mat-card >
+        <mat-card-header class="header">
+          <mat-card-title>{{punto.properties.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p> <strong> {{punto.properties.text}} </strong></p>
+        </mat-card-content>
+      </mat-card>
+    </mgl-popup>
+  </div>
+
+  <!-- <div class="puntos-geo">
+    <mgl-marker [lngLat]="[-66.137096, -17.386188]" #myMarker1 >
+      <div  class="marker" >
+        <img 
+            src="../../../../assets/img/marcador2.svg" 
+            alt="triangle with all three sides equal"
+            height="40px"
+            width="40px" />
+          <h3 class="titulo"><strong>{{opcion}}</strong></h3>
+      </div>
+    </mgl-marker>
+    <mgl-popup
+      [closeButton] = "false"
+      [closeOnClick]="true"
+      [marker]="myMarker1"
+      [anchor]="top-right"
+    >
+      <mat-card>
+        <mat-card-header class="header">
+          <mat-card-title>EPI-1</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Contenido HOLA</p>
+        </mat-card-content>
+      </mat-card>
+    </mgl-popup>
+  </div> -->
+
+</mgl-map>

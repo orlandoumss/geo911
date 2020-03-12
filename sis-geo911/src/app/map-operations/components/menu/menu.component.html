@@ -1,0 +1,77 @@
+<mat-drawer-container class="map-container" autosize>
+  <!-- menu de navegación lateral -->
+  <mat-drawer #drawer class="map-nav" mode="over">
+    <mat-toolbar class="opcion-nav"> <strong>BOL-110 </strong> </mat-toolbar>
+    <mat-divider class="nav-div"></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLinkActive="active" *ngFor="let dato of datosItem; let num = index" (click)= "enviarParametros(dato, num+1)">
+        <!-- <a mat-list-item  (click)= "enviarParametros('EPI-5', 3)"> -->
+        <mat-icon matListIcon >layers</mat-icon>
+        <p  >{{dato}}</p>
+        <!-- <button>{{dato}}</button> -->
+      </a>
+    </mat-nav-list>
+    <mat-divider class="nav-div"></mat-divider>
+    <!-- <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+  </mat-drawer>
+
+  <!-- <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div> -->
+  <!-- contenido de operaciones de mapa -->
+
+  <mat-drawer-content>
+    <mat-toolbar class="menu-admin" >
+      <!-- <mat-toolbar-row> -->
+      <form class="map-form" [formGroup]= "options" [style.fontSize.px]= "getFontSize()">
+        <button class="nav-button" type="button" mat-button (click)="drawer.toggle()">
+          <mat-icon class="logueo-icon" aria-hidden="false" aria-label="Example heart icon">menu</mat-icon>
+        </button>
+        <mat-form-field class="menu-buscar" appearance="fill" >
+
+          <mat-label>Buscar</mat-label>
+          <input type="text" matInput  [formControl]= "fontSizeControl" min="10" [matAutocomplete]="auto">
+          <!-- autocmpletado de formulario buscar -->
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              <!-- {{option.name}} -->
+              hola ddddd
+            </mat-option>
+          </mat-autocomplete>
+          <!-- <mat-icon matSuffix>search</mat-icon> -->
+
+        </mat-form-field>
+        <button class="nav-button" type="button" mat-button >
+          <mat-icon class="logueo-icon" aria-hidden="false" aria-label="Example heart icon">search</mat-icon>
+        </button>
+      </form>
+
+        <span class="example-spacer"></span>
+        <span>SISTEMA DE GEOLOCALIZACION BOL-110 COCHAkBAMBA</span>
+        <span class="example-spacer"></span>
+        <button mat-fab color="accent">
+          <mat-icon class="logueo-icon" aria-hidden="false" aria-label="Example heart icon">account_circle</mat-icon>
+        </button>
+
+      <!-- </mat-toolbar-row> -->
+
+    </mat-toolbar>
+
+    <!-- <div id="map911">
+
+    </div>
+    <pre id="coordinates" class="coordinates"></pre> -->
+    <app-panelmap></app-panelmap>
+
+  </mat-drawer-content>
+
+
+</mat-drawer-container>
+
+

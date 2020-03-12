@@ -1,0 +1,62 @@
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-toolbar class="menu-admin" >
+    <mat-toolbar-row>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon class="logueo-icon" aria-hidden="false" aria-label="Example heart icon">menu</mat-icon>
+      </button>
+      <span class="example-spacer"></span>
+      <span>SISTEMA DE GEOLOCALIZACION BOL-110 COCHABAMBA</span>
+      <span class="example-spacer"></span>
+      <button mat-fab color="accent">
+        <mat-icon class="logueo-icon" aria-hidden="false" aria-label="Example heart icon">account_circle</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <!-- <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+    <mat-toolbar class="opcion-menu">Menú adminstración</mat-toolbar>
+    <mat-nav-list>
+
+      <!-- <a mat-list-item href="..." *ngFor="let link of linksUsers"> {{ link }} </a> -->
+
+      <a mat-list-item [routerLink] = "['registro']">
+        <mat-icon matListIcon >post_add</mat-icon>
+        <p>Nuevo registro</p>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink] = "['editar']">
+        <mat-icon matListIcon >edit</mat-icon>
+        <p>Editar</p>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink] = "['eliminar']">
+        <mat-icon matListIcon >delete</mat-icon>
+        <p>Eliminar</p>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="">
+        <mat-icon matListIcon >search</mat-icon>
+        <p>Buscar</p>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink] = "['usuarios']">
+        <mat-icon matListIcon >group</mat-icon>
+        <p>Usuarios</p>
+      </a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="panel-sidenav-content">
+    <!-- <h2>contenido de panel de administración</h2> -->
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>
+

@@ -1,0 +1,151 @@
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.3em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -0.8em; margin-top: -4px;}
+
+#map911{
+  width: 100%;
+  height: 100%;
+  background-color: #1f5860;
+}
+.menu-map{
+  background-color: #12550c;
+  color: aliceblue;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.buscar{
+  background-color: #2b4750;
+  padding-top: 30px;
+}
+
+
+/* *****************diseño principal de pantalla************************ */
+
+/* .example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+} */
+
+.map-container{
+  width: 100%;
+  height: 100%;
+  border: 0px;
+}
+
+.map-nav{
+  width: 301px;
+}
+
+.example-container {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+
+}
+
+.menu-buscar{
+  background-color: #E0E0E0;
+  width: 300px;
+  padding-top: 15px;
+  margin-top: 0px;
+  color: #12550c;
+
+}
+
+.map-form{
+  background-color: #E0E0E0;
+
+  margin-left: -16px;
+  padding-left: 0px;
+  padding-top: -10px;
+  /* border-bottom: 10px; */
+  /* border: 1px 1px solid rgba(0, 0, 0, 0.5); */
+  display: flex;
+  align-items: baseline;
+}
+
+.panel-sidenav-content {
+  /* width: 90%; */
+  text-align: center;
+  display: flex;
+  /*flex-direction: column; */
+  height: 90%;
+  /* align-items: center;*/
+  justify-content: center;
+}
+
+.nav-button mat-icon{
+  /* background-color:#12550c; */
+  /* transform: scale(1.5); */
+  font-size: 35px;
+  color: #0d2b0a;
+  /* padding-top: -10px;
+  margin-top: -20px; */
+  padding: 0px 0px 0px 0px;
+  margin-left: -10px;
+}
+
+
+/* -------------menu administracion----------------- */
+
+.menu-admin{
+  background-color: #12550c;
+  color: aliceblue;
+  border: 0px;
+}
+
+.opcion-nav{
+  width: 300px;
+  background-color: #E0E0E0;
+  color: #0d2b0a;
+  /* padding: 0px 0px 0px 0px; */
+
+}
+
+.nav-div{
+  border-color: #0d2b0a;
+}
+
+
+/* ***************tooltip geolocaliciones ************************ */
+
+.marker {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.marker .markerTtool {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #111010;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.marker .markerTtool::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.marker:hover .markerTool {
+  visibility: visible;
+}

@@ -1,0 +1,91 @@
+<div >
+  <h2><strong>NUEVO REGISTRO DE GEOLOCALIZACION</strong> </h2>
+</div>
+
+<mat-divider></mat-divider>
+<br>
+<mat-card class="nuevo-registro">
+  <mat-card-header class="form-top">
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title><h3>Formulario de registro</h3></mat-card-title>
+    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+
+  </mat-card-header>
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+
+  <mat-card-content>
+    <form [formGroup]="formgeo" (ngSubmit)="savegeo($event)">
+    <mat-divider></mat-divider>
+    <p class="input-registro">
+      <mat-form-field class="form-registro" appearance="outline">
+        <mat-label>Nombre de serctor</mat-label>
+        <input matInput placeholder="Ingrese nombre de área" type = "text" formControlName="nom_grupo">
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+    </p>
+    <p class="input-registro">
+      <mat-form-field class="form-registro" appearance="outline">
+        <mat-label>Razón social</mat-label>
+        <input matInput placeholder="Ingrese Razon Social" type = "text" formControlName="razon_social">
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+    </p>
+    <p class="input-registro">
+      <mat-form-field class="form-registro" appearance="outline">
+        <mat-label>Dirección </mat-label>
+        <input matInput placeholder="ingrese la dirección" type = "text" formControlName="direccion">
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+    </p>
+      <p class="input-registro">
+        <mat-form-field class="form-registro" appearance="outline">
+          <mat-label>Teléfono</mat-label>
+          <input matInput placeholder="Ingrese número de teléfono" type = "number" formControlName="telefono">
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+      </p>
+      <p class="input-registro">
+          <mat-form-field class="form-registro" appearance="outline">
+            <mat-label>Distrito</mat-label>
+            <input matInput placeholder="Ingrese distrito" type = "text" formControlName="distrito">
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <!-- <mat-hint>Hint</mat-hint> -->
+          </mat-form-field>
+      </p>
+      <p class="input-registro">
+        <mat-form-field class="form-registro" appearance="outline">
+          <mat-label>Descripción</mat-label>
+          <input matInput placeholder="Ingrese descripción" type = "text" formControlName="descripcion">
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+    </p>
+      <p class="input-registro">
+        <mat-form-field class="form-registro" appearance="outline">
+          <mat-label>Latitud</mat-label>
+          <input matInput placeholder="Ingrese latitud" type = "text" formControlName="lat">
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field class="form-registro" appearance="outline">
+          <mat-label>Longitud</mat-label>
+          <input matInput placeholder="Ingrese longitud" type = "text" formControlName="lon">
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+    </p>
+    <p>
+      <button class="boton-registrogeo" type="submit" mat-flat-button [disabled]="formgeo.invalid">Guardar</button>
+    </p>
+
+  </form>
+  </mat-card-content>
+  <mat-card-actions class="boton-registro"  >
+
+    <!-- <button mat-button>SHARE</button> -->
+  </mat-card-actions>
+</mat-card>

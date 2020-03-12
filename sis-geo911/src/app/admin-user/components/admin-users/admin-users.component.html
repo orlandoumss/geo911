@@ -1,0 +1,121 @@
+
+<mat-tab-group class="usuario" animationDuration="1000ms" mat-align-tabs="center">
+
+  <mat-tab label="Nuevo usuario">
+    <br>
+    <mat-card class="nuevo-registro">
+      <mat-card-header class="form-top">
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title><h3>Formulario de registro de usuario</h3></mat-card-title>
+        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+
+      </mat-card-header>
+      <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+
+      <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="save($event)">
+          <mat-divider></mat-divider>
+          <p class="input-registro">
+            <mat-form-field class="form-registro" appearance="outline">
+              <mat-label>Grado</mat-label>
+              <input matInput placeholder="Ingrese grado" type = "text" formControlName="grado">
+              <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+          </p>
+          <p class="input-registro">
+            <mat-form-field class="form-registro" appearance="outline">
+              <mat-label>Nombre</mat-label>
+              <input matInput placeholder="Nombre de usuario" type = "text" formControlName="nombre">
+              <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+          </p>
+          <p class="input-registro">
+            <mat-form-field class="form-registro" appearance="outline">
+              <mat-label>Apellido paterno </mat-label>
+              <input matInput placeholder="ingrese apelido paterno" type = "text" formControlName="apellidoP">
+              <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+          </p>
+            <p class="input-registro">
+              <mat-form-field class="form-registro" appearance="outline">
+                <mat-label>Apellido materno</mat-label>
+                <input matInput placeholder="ingrese apellido materno" type = "text" formControlName="apellidoM">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+              </mat-form-field>
+            </p>
+            <!-- rol y cedula de usuario -->
+            <p class="input-registro">
+              <mat-form-field class="form-registro" appearance="outline">
+                <mat-label>Numero de C.I. </mat-label>
+                <input matInput placeholder="Numero de cedula de identidad" type = "text" formControlName="ci">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+              </mat-form-field>
+            </p>
+              <p class="input-registro">
+                <mat-form-field class="form-registro" appearance="outline">
+                  <mat-label>Rol de usuario</mat-label>
+                  <input matInput placeholder="ingrese rol de usuario" type="text" formControlName="rol">
+                  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                  <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+              </p>
+
+              <p class="input-registro">
+                <mat-form-field class="form-registro" appearance="outline">
+                  <mat-label>Teléfono</mat-label>
+                  <input matInput placeholder="ingrese número de télefono" type="text" formControlName="telefono">
+                  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                  <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+              </p>
+
+            <p class="input-registro">
+                <mat-form-field class="form-registro" appearance="outline">
+                  <mat-label>Usuario</mat-label>
+                  <input matInput placeholder="Usuario de acceso" type="text" formControlName="username">
+                  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                  <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </p>
+            <p class="input-registro">
+              <mat-form-field class="form-registro" appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input matInput placeholder="Crea una contraseña" type="password" formControlName="contrasena">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+              </mat-form-field>
+              <mat-form-field class="form-registro" appearance="outline">
+                <mat-label>Correo</mat-label>
+                <input matInput placeholder="ingrese correo electrónico" type="email" formControlName="email">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+              </mat-form-field>
+          </p>
+          <p>
+
+              <button class="boton-registro" type="submit" mat-flat-button [disabled]="form.invalid">Guardar</button>
+
+          </p>
+      </form>
+
+      </mat-card-content>
+      <!-- <mat-card-actions  >
+         <button mat-flat-button color='primary'>Guardar</button>
+         <button mat-button>SHARE</button>
+      </mat-card-actions> -->
+    </mat-card>
+  </mat-tab>
+
+  <mat-tab label="Editar Usuario">
+    Content
+  </mat-tab>
+
+  <mat-tab label="ayuda">Content</mat-tab>
+
+</mat-tab-group>
+

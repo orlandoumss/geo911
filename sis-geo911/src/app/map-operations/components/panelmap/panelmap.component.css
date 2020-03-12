@@ -1,0 +1,58 @@
+mgl-map {
+    height: 100%;
+    width: 100%;
+}
+
+.puntos-geo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.marker{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card{
+    /*background-color: #e7e4e2;*/
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    
+    
+}
+
+.popup{
+    /* background-color: #e95f20; */
+    background-origin: content-box 0px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background-color: #eaeeeaa9;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: -10px;
+}
+
+.titulo{
+    padding: 0px;
+    margin: 0px;
+    color: #dd0707;
+}
+p{
+    color: #0e720e;
+}
